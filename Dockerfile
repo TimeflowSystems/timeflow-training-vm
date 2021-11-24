@@ -4,6 +4,7 @@ RUN apt-get -y update
 RUN apt-get -y install wget
 RUN apt-get install -y gnupg2
 RUN apt-get -y install openjdk-8-jre
+RUN apt-get -y install tmux
 
 # nano
 
