@@ -46,5 +46,12 @@ RUN service  clickhouse-server start
 #    psql --user postgres --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\
 #    createdb -O docker docker
 
+# Snowflake
+
+RUN apt-get -y install curl
+RUN curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/linux_x86_64/snowsql-1.2.20-linux_x86_64.bash
+RUN chmod ugo+x ./snowsql-1.2.20-linux_x86_64.bash
+#RUN ./snowsql-linux_x86_64.bash
+
 CMD bash
 
