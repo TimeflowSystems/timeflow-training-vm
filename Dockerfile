@@ -41,6 +41,7 @@ RUN echo "deb https://repo.clickhouse.com/deb/stable/ main/" | tee /etc/apt/sour
 RUN apt-get -y update
 RUN apt-get -y install -y clickhouse-server clickhouse-client
 RUN service  clickhouse-server start
+RUN chown root /var/lib/clickhouse
 
 #RUN    /etc/init.d/postgresql start &&\
 #    psql --user postgres --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\
